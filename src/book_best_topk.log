@@ -1,0 +1,46 @@
+nohup: ignoring input
+ --------------  打印所有的参数 ----------------
+Namespace(agg='concat', batch_size=8192, contrastive_loss_weight=0.01, dataset='book', dim=32, eval_batch_size=8192, item_triple_set_size=32, kg_loss_weight=0.01, l2_weight=0.0001, lr=0.0035, n_epoch=30, n_layer=3, random_flag=False, random_seed=42, show_topk=False, temperature=15, use_contrastive_loss=True, use_cross=True, use_cuda=True, use_kg_loss=True, use_knowledge_gate=True, user_triple_set_size=32)
+ ---------------------------------------------
+[2023-09-16 22:39:30,415] INFO: ================== preparing data ===================
+[2023-09-16 22:39:30,415] INFO: load rating file: ../data/book/ratings_final.npy
+[2023-09-16 22:39:30,422] INFO: splitting dataset to 6:2:2 ...
+[2023-09-16 22:39:30,474] INFO: contructing users' initial entity set ...
+[2023-09-16 22:39:30,719] INFO: contructing items' initial entity set ...
+[2023-09-16 22:39:31,297] INFO: loading kg file: ../data/book/kg_final.npy
+[2023-09-16 22:39:31,354] INFO: constructing knowledge graph ...
+[2023-09-16 22:39:31,710] INFO: contructing users' kg triple sets ...
+[2023-09-16 22:39:35,694] INFO: contructing items' kg triple sets ...
+n_user:  17860 n_item:  14967 n_entity:  77903 n_relation:  25
+[2023-09-16 22:39:44,808] INFO: ================== training CKAN ====================
+use cuda!
+[2023-09-16 22:40:01,065] INFO: epoch 00    eval auc: 0.6463 f1: 0.6332    test auc: 0.6438 f1: 0.6343
+[2023-09-16 22:40:06,403] INFO: epoch 01    eval auc: 0.6480 f1: 0.6332    test auc: 0.6443 f1: 0.6345
+[2023-09-16 22:40:11,705] INFO: epoch 02    eval auc: 0.6495 f1: 0.6385    test auc: 0.6460 f1: 0.6395
+[2023-09-16 22:40:16,937] INFO: epoch 03    eval auc: 0.6528 f1: 0.6341    test auc: 0.6508 f1: 0.6396
+[2023-09-16 22:40:22,433] INFO: epoch 04    eval auc: 0.6653 f1: 0.6269    test auc: 0.6646 f1: 0.6320
+[2023-09-16 22:40:27,837] INFO: epoch 05    eval auc: 0.6775 f1: 0.5974    test auc: 0.6778 f1: 0.5988
+[2023-09-16 22:40:33,174] INFO: epoch 06    eval auc: 0.6939 f1: 0.5962    test auc: 0.6957 f1: 0.5987
+[2023-09-16 22:40:38,514] INFO: epoch 07    eval auc: 0.7308 f1: 0.6195    test auc: 0.7358 f1: 0.6228
+[2023-09-16 22:40:43,774] INFO: epoch 08    eval auc: 0.7657 f1: 0.6521    test auc: 0.7726 f1: 0.6579
+[2023-09-16 22:40:49,079] INFO: epoch 09    eval auc: 0.7735 f1: 0.6640    test auc: 0.7801 f1: 0.6701
+[2023-09-16 22:40:54,433] INFO: epoch 10    eval auc: 0.7744 f1: 0.6681    test auc: 0.7803 f1: 0.6736
+[2023-09-16 22:40:59,810] INFO: epoch 11    eval auc: 0.7768 f1: 0.6701    test auc: 0.7821 f1: 0.6746
+[2023-09-16 22:41:05,104] INFO: epoch 12    eval auc: 0.7778 f1: 0.6725    test auc: 0.7833 f1: 0.6762
+[2023-09-16 22:41:10,577] INFO: epoch 13    eval auc: 0.7781 f1: 0.6740    test auc: 0.7833 f1: 0.6793
+[2023-09-16 22:41:15,930] INFO: epoch 14    eval auc: 0.7785 f1: 0.6731    test auc: 0.7836 f1: 0.6784
+[2023-09-16 22:41:21,204] INFO: epoch 15    eval auc: 0.7781 f1: 0.6739    test auc: 0.7834 f1: 0.6801
+[2023-09-16 22:41:26,692] INFO: epoch 16    eval auc: 0.7782 f1: 0.6780    test auc: 0.7833 f1: 0.6841
+[2023-09-16 22:41:31,956] INFO: epoch 17    eval auc: 0.7770 f1: 0.6752    test auc: 0.7820 f1: 0.6792
+[2023-09-16 22:41:37,125] INFO: epoch 18    eval auc: 0.7766 f1: 0.6757    test auc: 0.7819 f1: 0.6807
+[2023-09-16 22:41:42,258] INFO: epoch 19    eval auc: 0.7757 f1: 0.6760    test auc: 0.7808 f1: 0.6804
+[2023-09-16 22:41:47,430] INFO: epoch 20    eval auc: 0.7750 f1: 0.6769    test auc: 0.7792 f1: 0.6799
+[2023-09-16 22:41:52,714] INFO: epoch 21    eval auc: 0.7735 f1: 0.6734    test auc: 0.7778 f1: 0.6770
+[2023-09-16 22:41:57,922] INFO: epoch 22    eval auc: 0.7720 f1: 0.6712    test auc: 0.7767 f1: 0.6742
+[2023-09-16 22:42:03,249] INFO: epoch 23    eval auc: 0.7711 f1: 0.6730    test auc: 0.7759 f1: 0.6755
+[2023-09-16 22:42:08,435] INFO: epoch 24    eval auc: 0.7701 f1: 0.6709    test auc: 0.7737 f1: 0.6720
+[2023-09-16 22:42:13,838] INFO: epoch 25    eval auc: 0.7685 f1: 0.6698    test auc: 0.7730 f1: 0.6742
+[2023-09-16 22:42:19,151] INFO: epoch 26    eval auc: 0.7673 f1: 0.6649    test auc: 0.7715 f1: 0.6715
+[2023-09-16 22:42:24,523] INFO: epoch 27    eval auc: 0.7656 f1: 0.6612    test auc: 0.7691 f1: 0.6661
+[2023-09-16 22:42:29,927] INFO: epoch 28    eval auc: 0.7648 f1: 0.6593    test auc: 0.7682 f1: 0.6668
+[2023-09-16 22:42:35,264] INFO: epoch 29    eval auc: 0.7624 f1: 0.6587    test auc: 0.7662 f1: 0.6646
